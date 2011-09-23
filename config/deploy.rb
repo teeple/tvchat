@@ -1,7 +1,16 @@
-set :application, "teeple"
-set :repository,  "set your repository location here"
+set :application, "tvchat"
 
-set :scm, :subversion
+default_run_options[:pty] = true
+set :repository,  "git@github.com:teeple/tvchat.git"
+
+set :scm, :git
+set :user, 'newbiz.uangel@gmail.com'
+set :scm_passphrase, 'teeple'
+set :branch, 'master'
+set :deploy_via, :remote_cache
+#set :scm_username, 'newbiz.uangel@gmail.com'
+#set :scm_password, 'newbiz.123'
+
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
 role :web, "your web-server here"                          # Your HTTP server, Apache/etc
